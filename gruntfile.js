@@ -17,8 +17,35 @@ module.exports = function(grunt){
 
         cssmin: {
             dist: {
+                options: {
+                    sourceMap: false
+                },
                 files: {
                     './public/stylesheets/style.min.css':'./public/stylesheets/style.css'
+                }
+            }
+        },
+
+        uglify: {
+            options: {
+                mangle: false,
+                sourceMap: true
+            },
+            dist: {
+                files: {
+                    './public/javascripts/main.min.js':'./public/javascripts/main.js'
+                }
+            }
+        },
+
+        babel: {
+            options: {
+                sourceMap: true,
+                presets: ['babel-preset-es2015']
+            },
+            dist: {
+                files: {
+                    './public/javascripts/main.js':'./dev/js/main.js'
                 }
             }
         },
@@ -31,13 +58,23 @@ module.exports = function(grunt){
             styles: {
                 files: ['./public/stylesheets/style.css'],
                 tasks: ['cssmin']
+            },
+            uglify: {
+                files: ['./public/javascripts/main.js'],
+                tasks: ['uglify']
+            },
+            babel: {
+                files: ['./dev/js/main.js'],
+                tasks: ['babel']
             }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-babel');
 
-    grunt.registerTask('default', ['sass', 'cssmin']);
+    grunt.registerTask('default', ['sass', 'cssmin','uglify']);
 };

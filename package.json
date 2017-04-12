@@ -17,13 +17,16 @@
     "grunt": "^1.0.1"
   },
   "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
     "express-generator": "^4.15.0",
+    "grunt-babel": "^6.0.0",
     "grunt-cli": "^1.2.0",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-cssmin": "^2.0.0",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-uglify": "^2.3.0",
     "grunt-contrib-watch": "^1.0.0",
+    "load-grunt-tasks": "^3.5.2",
     "nodemon": "^1.11.0"
   }
 }
