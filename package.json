@@ -1,0 +1,14 @@
+{
+  "name": "dbooks",
+  "version": "1.0.0",
+  "description": "A small indexer for your books",
+  "main": "none",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "books"
+  ],
+  "author": "Daphné Laflamme-Morin, Julien Ferluc",
+  "license": "GPL-3.0"
+}
