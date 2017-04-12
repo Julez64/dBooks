@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Concert+One");
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+body .page .title {
+  margin: 0;
+  font-family: 'Concert One', cursive;
 }
 
-a {
-  color: #00B7FF;
-}
+/*# sourceMappingURL=style.css.map */

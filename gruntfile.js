@@ -10,7 +10,7 @@ module.exports = function(grunt){
                     style: 'expanded'
                 },
                 files: {
-                    'css/styles.css' : 'sass/styles.scss'
+                    './public/stylesheets/style.css':'./dev/sass/styles.scss'
                 }
             }
         },
@@ -18,18 +18,18 @@ module.exports = function(grunt){
         cssmin: {
             dist: {
                 files: {
-                    'dist/styles.min.css' : 'css/styles.css'
+                    './public/stylesheets/style.min.css':'./public/stylesheets/style.css'
                 }
             }
         },
 
         watch: {
             sass: {
-                files: ['sass/**/*.scss'],
+                files: ['./dev/sass/*.scss'],
                 tasks: ['sass']
             },
             styles: {
-                files: ['css/styles.css'],
+                files: ['./public/stylesheets/style.css'],
                 tasks: ['cssmin']
             }
         }
