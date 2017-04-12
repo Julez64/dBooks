@@ -4,7 +4,6 @@
   "description": "A small indexer for your books",
   "main": "app.js",
   "scripts": {
-      //no scripts yet
   },
   "keywords": [
     "books"
