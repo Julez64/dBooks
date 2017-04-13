@@ -1,8 +1,7 @@
-"use strict";
+'use strict';
 
-var test = function test(message) {
-    alert(message);
-};
-
-test("Oh, hi Mark!");
+function hello(message) {
+    console.log(message);
+}
+hello('Bienvenu à dBooks!');
 //# sourceMappingURL=main.js.map

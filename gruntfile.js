@@ -10,7 +10,7 @@ module.exports = function(grunt){
                     style: 'expanded'
                 },
                 files: {
-                    './public/stylesheets/style.css':'./dev/sass/styles.scss'
+                    './public/stylesheets/style.css':'./dev/styles.scss'
                 }
             }
         },
@@ -28,7 +28,6 @@ module.exports = function(grunt){
 
         uglify: {
             options: {
-                mangle: false,
                 sourceMap: true
             },
             dist: {
@@ -45,29 +44,38 @@ module.exports = function(grunt){
             },
             dist: {
                 files: {
-                    './public/javascripts/main.js':'./dev/js/main.js'
+                    './public/javascripts/main.js':'./dev/main.js'
                 }
             }
         },
 
         watch: {
             sass: {
-                files: ['./dev/sass/*.scss'],
+                files: ['./dev/*.scss'],
                 tasks: ['sass']
             },
             styles: {
                 files: ['./public/stylesheets/style.css'],
-                tasks: ['cssmin']
+                tasks: ['cssmin'],
+                options: {
+                    livereload: 3000,
+                },
             },
             uglify: {
                 files: ['./public/javascripts/main.js'],
                 tasks: ['uglify']
             },
             babel: {
-                files: ['./dev/js/main.js'],
+                files: ['./dev/main.js'],
                 tasks: ['babel']
+            },
+            configFiles: {
+                files: "gruntfile.js",
+                    options: {
+                        reload: true
+                    }
+                }
             }
-        }
     });
 
     grunt.loadNpmTasks('grunt-contrib-sass');
