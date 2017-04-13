@@ -1,1 +1,1 @@
-@import url(https://fonts.googleapis.com/css?family=Concert+One);body{margin:0}body .page .title{margin:0;font-family:'Concert One',cursive}
+@import url(https://fonts.googleapis.com/css?family=Concert+One);.nav-content{background-color:#f3f3f3;display:flex;height:40px;justify-content:space-between}.nav-content .brand{padding:7px;font-size:26px;line-height:26px;font-family:"Concert One",sans-serif;color:grey}.nav-content ul{list-style-type:none}.nav-content ul li{display:inline-block;padding:10px;font-size:14px}

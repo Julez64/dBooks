@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../dev/main.js"],"names":["hello","message","console","log"],"mappings":";;AAAA,SAASA,KAAT,CAAeC,OAAf,EAAwB;AACpBC,YAAQC,GAAR,CAAYF,OAAZ;AACH;AACDD,MAAM,oBAAN","file":"main.js","sourcesContent":["function hello(message) {\r\n    console.log(message);\r\n}\r\nhello('Bienvenu à dBooks!');"]}
