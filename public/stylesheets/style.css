@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Concert+One");
 .nav-content {
-  background-color: #f3f3f3;
+  background-color: #F2F2F2;
   display: flex;
   height: 40px;
   justify-content: space-between;
@@ -10,7 +10,7 @@
   font-size: 26px;
   line-height: 26px;
   font-family: "Concert One",sans-serif;
-  color: grey;
+  color: #999999;
 }
 .nav-content ul {
   list-style-type: none;
