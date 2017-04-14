@@ -30,7 +30,7 @@ node_modules
 npm-debug.log
 
 bower_components/
-.vscode/
+.vscode
 .jshintrc
 .eslint
 .idea/
