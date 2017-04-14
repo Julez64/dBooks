@@ -1,0 +1,22 @@
+{
+  "name": "dbooks",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "JulienFerluc <ferluc.julien@carrefour.cegepvicto.ca>"
+  ],
+  "license": "GPL-3.0",
+  "homepage": "https://github.com/JulienFerluc/dBooks",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "bootstrap": "v4.0.0-alpha.6"
+  }
+}
