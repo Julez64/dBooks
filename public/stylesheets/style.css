@@ -8,12 +8,13 @@ nav .nav-content {
   display: flex;
   height: 50px;
   justify-content: space-between;
+  border-bottom: 5px solid #DFDFDF;
 }
 nav .nav-content .brand {
-  padding: 10px;
-  font-size: 30px;
-  line-height: 30px;
-  font-family: "Concert One",sans-serif;
+  padding: 5px 10px;
+  font-size: 40px;
+  line-height: 40px;
+  font-family: "Concert One", sans-serif;
   color: #999999;
 }
 nav .nav-content .brand:hover {
@@ -35,8 +36,7 @@ nav .nav-content .menu-button:hover {
 nav .nav-links {
   height: auto;
   display: none;
-  border-top: 5px solid #E2E2E2;
-  background-color: #E9E9E9;
+  background-color: #F2F2F2;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -68,7 +68,7 @@ nav .nav-links a:hover {
   border: 1px solid #F2F2F2;
   border-radius: 5px;
   font-size: 14px;
-  background-color: rgba(50, 50, 50, 0.5);
+  background-color: rgba(128, 128, 128, 0.5);
   color: #FFFFFF;
 }
 .page form input[type=text]:focus {
@@ -78,7 +78,7 @@ nav .nav-links a:hover {
   padding: 5px;
   border: 1px solid #FFFFFF;
   border-radius: 5px;
-  background-color: rgba(50, 50, 50, 0.5);
+  background-color: rgba(128, 128, 128, 0.5);
   color: #FFFFFF;
   font-size: 14px;
 }
@@ -88,19 +88,48 @@ nav .nav-links a:hover {
   color: #008754;
 }
 .page .intro {
-  background-color: rgba(50, 50, 50, 0.5);
+  background-color: rgba(128, 128, 128, 0.5);
+  text-align: justify;
 }
-.page .intro h1 {
-  display: block;
+.page .intro .intro-text h1 {
+  text-align: center;
   color: white;
   font-family: "Concert One", sans-serif;
   margin: 10px;
 }
-.page .intro p {
-  display: block;
+.page .intro .intro-text p {
+  text-align: justify;
   color: white;
   margin: 10px;
-  max-width: 50%;
+}
+
+.container-dashboard .dashboard-title {
+  font-size: 24px;
+  font-family: "Quicksand", sans-serif;
+  color: #999999;
+  margin: 0 20px 20px 20px;
+  border-bottom: 1px solid #eee;
+}
+.container-dashboard a h4 {
+  color: black;
+  font-family: "Raleway", sans-serif;
+  word-wrap: break-word;
+}
+.container-dashboard a .text-muted {
+  font-family: "Raleway", sans-serif;
+  word-wrap: break-word;
+}
+.container-dashboard a:hover {
+  text-decoration: none;
+}
+.container-dashboard .placeholders {
+  padding-bottom: 3rem;
+}
+.container-dashboard .placeholder img {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  height: 200px;
+  width: 100px;
 }
 
 /*# sourceMappingURL=style.css.map */

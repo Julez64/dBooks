@@ -3,6 +3,11 @@
 $nav-color-hover: #666666;
 $nav-color: #999999;
 $nav-bg-color: #F2F2F2;
+$transparent: rgba(0,0,0,0);
+$semi-transparent: rgba(128,128,128,0.5);
+$quicksand: 'Quicksand', sans-serif;
+$raleway:  'Raleway', sans-serif;
+$concert-one: "Concert One",sans-serif;
 
 textarea, input, button { outline: none; }
 
@@ -12,12 +17,13 @@ nav{
         display: flex;
         height: 50px;
         justify-content: space-between;
+        border-bottom: 5px solid #DFDFDF;
 
         .brand{
-            padding: 10px;
-            font-size: 30px;
-            line-height: 30px;
-            font-family: "Concert One",sans-serif;
+            padding: 5px 10px;
+            font-size: 40px;
+            line-height: 40px;
+            font-family: $concert-one;
             color: $nav-color;
 
             &:hover{
@@ -43,8 +49,7 @@ nav{
     .nav-links{
         height: auto;
         display: none;
-        border-top: 5px solid #E2E2E2;
-        background-color: #E9E9E9;
+        background-color: $nav-bg-color;
         justify-content: center;
         flex-wrap: wrap;
 
@@ -79,7 +84,7 @@ nav{
             border: 1px solid #F2F2F2;
             border-radius: 5px;
             font-size: 14px;
-            background-color: rgba(50,50,50,0.5);
+            background-color: $semi-transparent;
             color: #FFFFFF;
 
             &:focus{
@@ -91,12 +96,12 @@ nav{
             padding: 5px;
             border: 1px solid #FFFFFF;
             border-radius: 5px;
-            background-color: rgba(50,50,50,0.5);
+            background-color: $semi-transparent;
             color: #FFFFFF;
             font-size: 14px;
 
             &:hover{
-                background-color: rgba(0,0,0,0);
+                background-color: $transparent;
                 border:1px solid #008754;
                 color: #008754;
             }
@@ -104,20 +109,60 @@ nav{
     }
 
     .intro{
-        background-color: rgba(50,50,50,0.5);
+        background-color: $semi-transparent;
+        text-align: justify;
 
-        h1{
-            display: block;
-            color: white;
-            font-family: "Concert One", sans-serif;
-            margin: 10px;
+        .intro-text{
+            h1{
+                text-align: center;
+                color: white;
+                font-family: $concert-one;
+                margin: 10px;
+            }
+
+            p{
+                text-align: justify;
+                color: white;
+                margin: 10px;
+            }
+        }
+    }
+}
+
+.container-dashboard{
+    .dashboard-title{
+        font-size: 24px;
+        font-family: $quicksand;
+        color: $nav-color;
+        margin: 0 20px 20px 20px;
+        border-bottom: 1px solid #eee;
+    }
+
+    a{
+
+        h4{
+            color :black;
+            font-family: $raleway;
+            word-wrap: break-word;
         }
 
-        p{
-            display: block;
-            color: white;
-            margin: 10px;
-            max-width: 50%;
+        .text-muted{
+            font-family: $raleway;
+            word-wrap: break-word;
         }
+        &:hover{
+            text-decoration: none;
+        }
+    }
+
+    .placeholders {
+        padding-bottom: 3rem;
+    }
+
+    .placeholder img {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        height: 200px;
+        width: 100px;
     }
 }
