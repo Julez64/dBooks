@@ -2,20 +2,23 @@
 textarea, input, button {
   outline: none;
 }
+textarea:focus, input:focus, button:focus {
+  outline: none;
+}
 
 nav .nav-content {
   background-color: #F2F2F2;
   display: flex;
   height: 50px;
   justify-content: space-between;
-  border-bottom: 5px solid #DFDFDF;
+  border-bottom: 1px solid #DFDFDF;
 }
 nav .nav-content .brand {
   padding: 5px 10px;
   font-size: 40px;
   line-height: 40px;
   font-family: "Concert One", sans-serif;
-  color: #999999;
+  color: #E7353D;
 }
 nav .nav-content .brand:hover {
   text-decoration: none;
@@ -146,44 +149,57 @@ nav .nav-links a:hover {
 .container-dashboard .dash-controls a:hover {
   color: #666666;
 }
-.container-dashboard a:hover {
-  text-decoration: none;
-}
-.container-dashboard a img {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  border: 3px solid #FFFFFF;
-  border-radius: 15px;
-}
-.container-dashboard a .livre-info {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  z-index: 50;
-  width: 100%;
-  height: 100%;
-  padding: 10px;
-  color: transparent;
-}
-.container-dashboard a .livre-info:hover, .container-dashboard a .livre-info:visited {
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 15px;
-  border: 3px solid #FFFFFF;
-  color: white;
-}
-.container-dashboard a .livre-info h4, .container-dashboard a .livre-info p {
-  color: inherit;
-  font-family: "Raleway", sans-serif;
-  word-wrap: break-word;
-  text-overflow: ellipsis;
+.container-dashboard .livres {
+  padding-top: 20px;
 }
 .container-dashboard .livre {
   padding: 0;
 }
-.container-dashboard .livres {
-  padding-top: 20px;
+.container-dashboard .livre img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  border-radius: 3px;
+  padding: 20px;
+}
+.container-dashboard .livre .livre-info {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: transparent;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+}
+.container-dashboard .livre .livre-info button {
+  color: transparent;
+  background-color: transparent;
+  border: none;
+}
+.container-dashboard .livre .livre-info:hover, .container-dashboard .livre .livre-info:visited {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+}
+.container-dashboard .livre .livre-info:hover h4, .container-dashboard .livre .livre-info:hover p, .container-dashboard .livre .livre-info:visited h4, .container-dashboard .livre .livre-info:visited p {
+  font-family: "Raleway", sans-serif;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+}
+.container-dashboard .livre .livre-info:hover h4, .container-dashboard .livre .livre-info:visited h4 {
+  color: white;
+  font-size: 20px;
+}
+.container-dashboard .livre .livre-info:hover p, .container-dashboard .livre .livre-info:visited p {
+  color: lightgrey;
+  font-size: 14px;
+}
+.container-dashboard .livre .livre-info:hover button, .container-dashboard .livre .livre-info:visited button {
+  background-color: #E7353D;
+  padding: 0 10px;
+  border-radius: 20px;
+  color: white;
 }
 
 .font-smoothing {

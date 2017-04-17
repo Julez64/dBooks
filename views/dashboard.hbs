@@ -35,16 +35,15 @@
                     <a href="#" class="material-icons" onclick="">edit</a>
                 </div>
             </div>
-            <section class="row container-fluid text-center livres">
+            <section class="row container-fluid livres">
                 {{#each book}}
                     <div class="col-6 col-sm-3 col-lg-2 livre">
-                        <a href="javascript:void(0)">
-                            <div class="livre-info .font-smoothing">
-                                <h4>{{title}}</h4>
-                                <p>{{author}}</p>
-                            </div>
-                            <img src="{{url}}" class="img-fluid" alt="No Cover">
-                        </a>
+                        <div class="livre-info .font-smoothing">
+                            <h4>{{title}}</h4>
+                            <p>{{author}}</p>
+                            <button>En savoir plus</button>
+                        </div>
+                        <img src="{{url}}" class="img-fluid" alt="No Cover">
                     </div>
                 {{/each}}
             </section>

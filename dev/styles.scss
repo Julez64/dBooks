@@ -3,13 +3,20 @@
 $nav-color-hover: #666666;
 $nav-color: #999999;
 $nav-bg-color: #F2F2F2;
+$accent-color: #E7353D;
 $transparent: rgba(0,0,0,0);
 $semi-transparent: rgba(128,128,128,0.5);
 $quicksand: 'Quicksand', sans-serif;
 $raleway:  'Raleway', sans-serif;
 $concert-one: "Concert One",sans-serif;
 
-textarea, input, button { outline: none; }
+textarea, input, button { 
+    outline: none;
+
+    &:focus{
+        outline: none;
+    }
+}
 
 nav{
     .nav-content{
@@ -17,14 +24,14 @@ nav{
         display: flex;
         height: 50px;
         justify-content: space-between;
-        border-bottom: 5px solid #DFDFDF;
+        border-bottom: 1px solid #DFDFDF;
 
         .brand{
             padding: 5px 10px;
             font-size: 40px;
             line-height: 40px;
             font-family: $concert-one;
-            color: $nav-color;
+            color: $accent-color;
 
             &:hover{
                 text-decoration: none;
@@ -178,56 +185,72 @@ nav{
             }
         }
     }
+    
+    .livres {
+        padding-top: 20px;
+    }
 
-    a{
-        &:hover{
-            text-decoration: none;
-        }
-        
+    .livre{
+        padding: 0;
+            
         img {
             width: 100%;
             height: 100%;
             background-size: cover;
-            border: 3px solid #FFFFFF;
-            border-radius: 15px;
+            border-radius: 3px;
+            padding: 20px;
         }
 
         .livre-info{
             position: absolute;
             display: flex;
             justify-content: center;
+            align-items: center;
             flex-direction: column;
-            z-index: 50;
-            width: 100%;
-            height: 100%;
-            padding: 10px;
             color: transparent;
-            
+            height: 100%;
+            width: 100%;
+            padding: 20px;
+
+            button{
+                color: transparent;
+                background-color: transparent;
+                border: none;
+            }
+                
 
             &:hover, &:visited{
                 background-color :rgba(0,0,0,0.7);
-                border-radius: 15px;
-                border: 3px solid #FFFFFF;
-                color: white;
-            }
+                border-radius: 5px;
+                
+                h4, p{
+                    font-family: $raleway;
+                    word-wrap: break-word;
+                    text-overflow: ellipsis;
+                }
 
-            h4, p{
-                color: inherit;
-                font-family: $raleway;
-                word-wrap: break-word;
-                text-overflow: ellipsis;
+                h4{
+                    color: white;
+                    font-size: 20px;
+                }
+
+                p{
+                    color: lightgrey;
+                    font-size: 14px;
+                }
+
+                button{
+                    background-color: $accent-color;
+                    padding: 0 10px;
+                    border-radius: 20px;
+                    color: white;
+                }
             }
         }
     }
-
-    .livre{
-        padding: 0;
-    }
-
-    .livres {
-        padding-top: 20px;
-    }
 }
+
+
 
 .font-smoothing {
     -webkit-font-smoothing: antialiased;
