@@ -2,20 +2,24 @@
 textarea, input, button {
   outline: none;
 }
+textarea:focus, input:focus, button:focus {
+  outline: none;
+}
 
 nav .nav-content {
   background-color: #F2F2F2;
   display: flex;
   height: 50px;
   justify-content: space-between;
-  border-bottom: 5px solid #DFDFDF;
+  flex-wrap: wrap;
+  align-items: center;
+  border-bottom: 1px solid #DFDFDF;
 }
 nav .nav-content .brand {
-  padding: 5px 10px;
-  font-size: 40px;
-  line-height: 40px;
+  padding-left: 10px;
+  font-size: 50px;
   font-family: "Concert One", sans-serif;
-  color: #999999;
+  color: #E7353D;
 }
 nav .nav-content .brand:hover {
   text-decoration: none;
@@ -34,19 +38,16 @@ nav .nav-content i:hover {
   cursor: pointer;
 }
 nav .nav-links {
-  height: 0;
   width: 100%;
-  /* 0 width - change this with JavaScript */
   z-index: 1;
-  background-color: #EEEEEE;
-  /* Black*/
-  transition: 0.5s;
+  background-color: #F2F2F2;
   overflow: hidden;
   display: flex;
   justify-content: space-around;
+  border-bottom: 1px solid #DFDFDF;
 }
 nav .nav-links a {
-  padding: 8px 8px 8px 32px;
+  padding: 8px;
   text-decoration: none;
   font-size: 16px;
   color: #999999;
@@ -96,94 +97,140 @@ nav .nav-links a:hover {
 .page .intro .intro-text h1 {
   text-align: center;
   color: white;
-  font-family: "Concert One", sans-serif;
+  font-family: "Quicksand", sans-serif;
   margin: 10px;
 }
 .page .intro .intro-text p {
+  font-family: "Raleway", sans-serif;
   text-align: justify;
   color: white;
   margin: 10px;
 }
 
-.container-dashboard .dash-text {
+.container-dashboard .dash-container main {
+  padding-top: 10px;
+}
+.container-dashboard .dash-container main .dash-text {
   border-bottom: 1px solid #EEEEEE;
 }
-.container-dashboard .dash-text h1 {
-  font-size: 24px;
+.container-dashboard .dash-container main .dash-text h1 {
+  font-size: 28px;
   font-family: "Quicksand", sans-serif;
   color: #999999;
   float: left;
 }
-.container-dashboard .dash-text i {
+.container-dashboard .dash-container main .dash-text i {
   float: right;
-  font-size: 24px;
+  font-size: 28px;
   color: #999999;
 }
-.container-dashboard .dash-text i:hover {
+.container-dashboard .dash-container main .dash-text i:hover {
   color: #666666;
   cursor: pointer;
 }
-.container-dashboard .dash-controls {
-  height: 0;
-  width: 100%;
-  /* 0 width - change this with JavaScript */
+.container-dashboard .dash-container main .dash-controls {
   z-index: 1;
   background-color: #EEEEEE;
-  /* Black*/
-  transition: 0.5s;
   overflow: hidden;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-around;
 }
-.container-dashboard .dash-controls a {
+@media (max-width: 767px) {
+  .container-dashboard .dash-container main .dash-controls {
+    flex-direction: column;
+  }
+}
+.container-dashboard .dash-container main .dash-controls a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 20px;
   color: #999999;
   transition: 0.3s;
 }
-.container-dashboard .dash-controls a:hover {
+.container-dashboard .dash-container main .dash-controls a:hover {
   color: #666666;
 }
-.container-dashboard a:hover {
-  text-decoration: none;
-}
-.container-dashboard a img {
+.container-dashboard .dash-container main .dash-controls .action-form {
   width: 100%;
-  height: 100%;
-  background-size: cover;
-  border: 3px solid #FFFFFF;
-  border-radius: 15px;
 }
-.container-dashboard a .livre-info {
-  position: absolute;
+.container-dashboard .dash-container main .dash-controls .action-form form {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  z-index: 50;
+  align-items: center;
+  flex-flow: row;
+  padding: 20px;
+}
+.container-dashboard .dash-container main .dash-controls .action-form form button {
+  color: #999999;
+  border: none;
+  font-size: 16px;
+  float: right;
+  margin-left: 10px;
+  background-color: transparent;
+}
+.container-dashboard .dash-container main .dash-controls .action-form form button:hover {
+  color: #666666;
+  cursor: pointer;
+}
+.container-dashboard .dash-container main .dash-controls .action-form form input {
+  color: #999999;
   width: 100%;
-  height: 100%;
-  padding: 10px;
-  color: transparent;
+  max-width: 1000px;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  float: left;
 }
-.container-dashboard a .livre-info:hover, .container-dashboard a .livre-info:visited {
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 15px;
-  border: 3px solid #FFFFFF;
-  color: white;
-}
-.container-dashboard a .livre-info h4, .container-dashboard a .livre-info p {
-  color: inherit;
-  font-family: "Raleway", sans-serif;
-  word-wrap: break-word;
-  text-overflow: ellipsis;
+.container-dashboard .livres {
+  padding-top: 20px;
 }
 .container-dashboard .livre {
   padding: 0;
 }
-.container-dashboard .livres {
-  padding-top: 20px;
+.container-dashboard .livre img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.container-dashboard .livre .livre-info {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  color: transparent;
+  height: 100%;
+  width: 100%;
+  border: 3px solid white;
+}
+.container-dashboard .livre .livre-info a {
+  color: transparent;
+  background-color: transparent;
+}
+.container-dashboard .livre .livre-info:hover, .container-dashboard .livre .livre-info:visited {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 3px solid white;
+}
+.container-dashboard .livre .livre-info:hover h4, .container-dashboard .livre .livre-info:hover p, .container-dashboard .livre .livre-info:hover a, .container-dashboard .livre .livre-info:visited h4, .container-dashboard .livre .livre-info:visited p, .container-dashboard .livre .livre-info:visited a {
+  font-family: "Raleway", sans-serif;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+}
+.container-dashboard .livre .livre-info:hover h4, .container-dashboard .livre .livre-info:visited h4 {
+  color: white;
+  font-size: 22px;
+}
+.container-dashboard .livre .livre-info:hover p, .container-dashboard .livre .livre-info:visited p {
+  color: lightgrey;
+  font-size: 18px;
+}
+.container-dashboard .livre .livre-info:hover a, .container-dashboard .livre .livre-info:visited a {
+  background-color: #E7353D;
+  padding: 0 10px;
+  border-radius: 20px;
+  color: white;
+  font-size: 14px;
 }
 
 .font-smoothing {
