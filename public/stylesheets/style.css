@@ -22,36 +22,38 @@ nav .nav-content .brand:hover {
   color: #666666;
   cursor: pointer;
 }
-nav .nav-content .menu-button {
+nav .nav-content i {
   font-size: 30px;
   color: #999999;
   padding: 10px;
   line-height: 30px;
 }
-nav .nav-content .menu-button:hover {
+nav .nav-content i:hover {
   text-decoration: none;
   color: #666666;
   cursor: pointer;
 }
 nav .nav-links {
-  height: auto;
-  display: none;
-  background-color: #F2F2F2;
-  justify-content: center;
-  flex-wrap: wrap;
+  height: 0;
+  width: 100%;
+  /* 0 width - change this with JavaScript */
+  z-index: 1;
+  background-color: #EEEEEE;
+  /* Black*/
+  transition: 0.5s;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
 }
 nav .nav-links a {
-  margin: 0 15px 0 15px;
-  height: inherit;
-  padding: 15px;
-  font-size: 14px;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 16px;
   color: #999999;
-  font-family: Arial, Helvetica, sans-serif;
+  transition: 0.3s;
 }
 nav .nav-links a:hover {
-  text-decoration: none;
   color: #666666;
-  cursor: pointer;
 }
 
 .page {
@@ -103,33 +105,90 @@ nav .nav-links a:hover {
   margin: 10px;
 }
 
-.container-dashboard .dashboard-title {
+.container-dashboard .dash-text {
+  border-bottom: 1px solid #EEEEEE;
+}
+.container-dashboard .dash-text h1 {
   font-size: 24px;
   font-family: "Quicksand", sans-serif;
   color: #999999;
-  margin: 0 20px 20px 20px;
-  border-bottom: 1px solid #eee;
+  float: left;
 }
-.container-dashboard a h4 {
-  color: black;
-  font-family: "Raleway", sans-serif;
-  word-wrap: break-word;
+.container-dashboard .dash-text i {
+  float: right;
+  font-size: 24px;
+  color: #999999;
 }
-.container-dashboard a .text-muted {
-  font-family: "Raleway", sans-serif;
-  word-wrap: break-word;
+.container-dashboard .dash-text i:hover {
+  color: #666666;
+  cursor: pointer;
+}
+.container-dashboard .dash-controls {
+  height: 0;
+  width: 100%;
+  /* 0 width - change this with JavaScript */
+  z-index: 1;
+  background-color: #EEEEEE;
+  /* Black*/
+  transition: 0.5s;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.container-dashboard .dash-controls a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #999999;
+  transition: 0.3s;
+}
+.container-dashboard .dash-controls a:hover {
+  color: #666666;
 }
 .container-dashboard a:hover {
   text-decoration: none;
 }
-.container-dashboard .placeholders {
-  padding-bottom: 3rem;
+.container-dashboard a img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  border: 3px solid #FFFFFF;
+  border-radius: 15px;
 }
-.container-dashboard .placeholder img {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  height: 200px;
-  width: 100px;
+.container-dashboard a .livre-info {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 50;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  color: transparent;
+}
+.container-dashboard a .livre-info:hover, .container-dashboard a .livre-info:visited {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  border: 3px solid #FFFFFF;
+  color: white;
+}
+.container-dashboard a .livre-info h4, .container-dashboard a .livre-info p {
+  color: inherit;
+  font-family: "Raleway", sans-serif;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+}
+.container-dashboard .livre {
+  padding: 0;
+}
+.container-dashboard .livres {
+  padding-top: 20px;
+}
+
+.font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /*# sourceMappingURL=style.css.map */

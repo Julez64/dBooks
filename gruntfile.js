@@ -18,7 +18,7 @@ module.exports = function(grunt){
         cssmin: {
             dist: {
                 options: {
-                    sourceMap: false
+                    sourceMap: true
                 },
                 files: {
                     './public/stylesheets/style.min.css':'./public/stylesheets/style.css'
@@ -63,10 +63,7 @@ module.exports = function(grunt){
             },
             uglify: {
                 files: ['./public/javascripts/main.js'],
-                tasks: ['uglify'],
-                options: {
-                    livereload: 3000,
-                },
+                tasks: ['uglify']
             },
             babel: {
                 files: ['./dev/main.js'],

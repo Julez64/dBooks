@@ -3,54 +3,31 @@ var router = express.Router();
 
 var books = {
     one: {
-        title: "Harry Potter et les reliques de la mort",
-        author: "J.K Rowling"
+        title: "Harry Potter à l'école des sorciers",
+        author: "J.K Rowling",
+        url: "http://www.encyclopedie-hp.org/wp-content/uploads/sites/4/2014/09/couverture_es.jpg"
     },
     two: {
-        title: "Harry Potter et les reliques de la mort",
-        author: "Some other book faggot"
+        title: "Making things happen",
+        author: "Elizabeth Murphy",
+        url: "https://about.canva.com/wp-content/uploads/sites/3/2015/01/business_bookcover.png"
     },
     three: {
-        title: "ANTICONSTITUTION DE LA MAUDITE ILE DE LLIAMGOCHGOCHSAMSIAMLLIGOCH",
-        author: "Herman Melville"
+        title: "Moby Dick",
+        author: "Herman Melville",
+        url: "http://i.dailymail.co.uk/i/pix/2011/06/15/article-2003632-0C90802A00000578-22_233x351.jpg"
     },
     four: {
-        title: "Moby Dick",
-        author: "Herman Melville"
+        title: "Harry Potter et la chambre des secrets",
+        author: "J.K Rowling",
+        url: "http://static.fnac-static.com/multimedia/images_produits/ZoomPE/4/9/2/9782070541294/tsp20071011005424/Harry-Potter-et-la-chambre-des-secrets.jpg"
     },
     five: {
-        title: "Moby Dick",
-        author: "Herman Melville"
-    },
-    six: {
-        title: "Moby Dick",
-        author: "Herman Melville"
-    },
-    onee: {
-        title: "Harry Potter et les reliques de la mort",
-        author: "J.K Rowling"
-    },
-    twoe: {
-        title: "Harry Potter et les reliques de la mort",
-        author: "Some other book faggot"
-    },
-    threee: {
-        title: "Moby Dick",
-        author: "Herman Melville"
-    },
-    foure: {
-        title: "Moby Dick",
-        author: "Herman Melville"
-    },
-    fivee: {
-        title: "Moby Dick",
-        author: "Herman Melville"
-    },
-    sixe: {
-        title: "Moby Dick",
-        author: "Herman Melville"
+        title: "Sherlock Holmes",
+        author: "Sir Arthur Conan Doyle",
+        url: "http://www.aboutgreatbooks.com/wp-content/uploads/2015/09/the-complete-sherlock-holmes-sherlock-holmes-books-679x1024.jpg"
     }
-}
+};
 
 /* GET home page. */
 router.get('/', function(req, res, next) {

@@ -32,7 +32,8 @@ nav{
                 cursor: pointer;
             }
         }
-        .menu-button{
+
+        i{
             font-size: 30px;
             color: $nav-color;
             padding: 10px;
@@ -47,24 +48,24 @@ nav{
     }
 
     .nav-links{
-        height: auto;
-        display: none;
-        background-color: $nav-bg-color;
-        justify-content: center;
-        flex-wrap: wrap;
+        height: 0;
+        width: 100%; /* 0 width - change this with JavaScript */
+        z-index: 1;
+        background-color: #EEEEEE; /* Black*/
+        transition: 0.5s;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-around;
 
         a {
-            margin: 0 15px 0 15px;
-            height: inherit;
-            padding: 15px;
-            font-size: 14px;
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 16px;
             color: $nav-color;
-            font-family: Arial, Helvetica, sans-serif;
+            transition: 0.3s;
 
             &:hover{
-                text-decoration: none;
                 color: $nav-color-hover;
-                cursor: pointer;
             }
         }
     }
@@ -130,39 +131,105 @@ nav{
 }
 
 .container-dashboard{
-    .dashboard-title{
+
+    .dash-text{
+        border-bottom: 1px solid #EEEEEE;
+
+        h1{
         font-size: 24px;
         font-family: $quicksand;
         color: $nav-color;
-        margin: 0 20px 20px 20px;
-        border-bottom: 1px solid #eee;
+        float: left;
+        
+        }
+
+        i{
+            float: right;
+            font-size: 24px;
+            color: $nav-color;
+
+            &:hover{
+                color: $nav-color-hover;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .dash-controls {
+        height: 0;
+        width: 100%; /* 0 width - change this with JavaScript */
+        z-index: 1;
+        background-color: #EEEEEE; /* Black*/
+        transition: 0.5s;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 20px;
+            color: $nav-color;
+            transition: 0.3s;
+
+            &:hover{
+                color: $nav-color-hover;
+            }
+        }
     }
 
     a{
-
-        h4{
-            color :black;
-            font-family: $raleway;
-            word-wrap: break-word;
-        }
-
-        .text-muted{
-            font-family: $raleway;
-            word-wrap: break-word;
-        }
         &:hover{
             text-decoration: none;
         }
+        
+        img {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            border: 3px solid #FFFFFF;
+            border-radius: 15px;
+        }
+
+        .livre-info{
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            z-index: 50;
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            color: transparent;
+            
+
+            &:hover, &:visited{
+                background-color :rgba(0,0,0,0.7);
+                border-radius: 15px;
+                border: 3px solid #FFFFFF;
+                color: white;
+            }
+
+            h4, p{
+                color: inherit;
+                font-family: $raleway;
+                word-wrap: break-word;
+                text-overflow: ellipsis;
+            }
+        }
     }
 
-    .placeholders {
-        padding-bottom: 3rem;
+    .livre{
+        padding: 0;
     }
 
-    .placeholder img {
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
-        height: 200px;
-        width: 100px;
+    .livres {
+        padding-top: 20px;
     }
+}
+
+.font-smoothing {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }

@@ -4,10 +4,10 @@
             {{title}}
         </a>
         <a href="javascript:void(0)" onclick="menuToggle()">
-            <i class="material-icons menu-button">arrow_drop_down</i>
+            <i class="material-icons">arrow_drop_down</i>
         </a>
     </div>
-    <div class="nav-links" id="nav-menu">
+    <div class="nav-links">
         <a href="#">link</a>
         <a href="#">link</a>
         <a href="#">link</a>
@@ -18,16 +18,32 @@
 </nav>
 
 <div class="container-fluid container-dashboard">
-    <div class="row no-gutters">
-        <main class="col-12 pt-3">
-            <h1 class="dashboard-title">Bibliothèque</h1>
-            <section class="row text-center placeholders">
+    <div class="row dash-container">
+        <main class="col-12 pt-5">
+            <div class="dash-text clearfix ">
+                <h1>Bibliothèque</h1>
+                <i class="material-icons" onclick="SidenavToggle()">menu</i>
+            </div>
+            <div id="dash-controls" class="dash-controls">
+                <div class="action-form">
+                    <a href="#" class="material-icons" onclick="">add</a>
+                </div>
+                <div class="action-form">
+                    <a href="#" class="material-icons" onclick="">delete</a>
+                </div>
+                <div class="action-form">
+                    <a href="#" class="material-icons" onclick="">edit</a>
+                </div>
+            </div>
+            <section class="row container-fluid text-center livres">
                 {{#each book}}
-                    <div class="col-6 col-sm-3 col-lg-2 mb-2 placeholder">
-                        <a href="#">
-                            <img src="data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=" class="img-fluid thumbnails" alt="Generic placeholder thumbnail">
-                            <h4>{{title}}</h4>
-                            <div class="text-muted">{{author}}</div>
+                    <div class="col-6 col-sm-3 col-lg-2 livre">
+                        <a href="javascript:void(0)">
+                            <div class="livre-info .font-smoothing">
+                                <h4>{{title}}</h4>
+                                <p>{{author}}</p>
+                            </div>
+                            <img src="{{url}}" class="img-fluid" alt="No Cover">
                         </a>
                     </div>
                 {{/each}}
