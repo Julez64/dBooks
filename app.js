@@ -4,14 +4,21 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var exphbs  = require('express-handlebars');
+var compression = require('compression')
 
 var index = require('./routes/index');
 var dashboard = require("./routes/dashboard");
 
 var app = express();
 
+app.use(compression());
+
+var hbs = exphbs.create({ /* config */ });
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
+app.engine('handlebars', hbs.engine);
 app.set('view engine', 'hbs');
 
 // uncomment after placing your favicon in /public

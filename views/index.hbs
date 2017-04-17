@@ -1,13 +1,13 @@
 <nav>
     <div class="nav-content">
-        <a href="" class="brand">
+        <a href="" class="brand font-smoothing">
             {{title}}
         </a>
         <a href="javascript:void(0)" onclick="menuToggle()">
             <i class="material-icons">arrow_drop_down</i>
         </a>
     </div>
-    <div class="nav-links" id="nav-menu">
+    <div class="nav-links">
         <a href="#">link</a>
         <a href="#">link</a>
         <a href="#">link</a>
@@ -16,13 +16,16 @@
         <a href="#">Sign-in/Register</a>
     </div>
 </nav>
+
 <div class="page">
     <div class="row no-gutters justify-content-center">
-        <form method="POST" class="form-inline">
-            <label class="sr-only" for="searchForm">Search:</label>
-            <input type="text" id="searchForm">
-            <button type="submit">Chercher</button>
-        </form>
+        <div class="col-8">
+            <form method="POST" class="form-inline">
+                <label class="sr-only" for="searchForm">Search:</label>
+                <input type="text" id="searchForm">
+                <button type="submit">Chercher</button>
+            </form>
+        </div>
     </div>
 
     <div class="intro row no-gutters justify-content-center">

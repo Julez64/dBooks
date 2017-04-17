@@ -1,6 +1,6 @@
 <nav>
     <div class="nav-content">
-        <a href="" class="brand">
+        <a href="" class="brand font-smoothing">
             {{title}}
         </a>
         <a href="javascript:void(0)" onclick="menuToggle()">
@@ -19,29 +19,50 @@
 
 <div class="container-fluid container-dashboard">
     <div class="row dash-container">
-        <main class="col-12 pt-5">
-            <div class="dash-text clearfix ">
+        <main class="col-12">
+            <div class="dash-text clearfix">
                 <h1>Bibliothèque</h1>
                 <i class="material-icons" onclick="SidenavToggle()">menu</i>
             </div>
             <div id="dash-controls" class="dash-controls">
                 <div class="action-form">
-                    <a href="#" class="material-icons" onclick="">add</a>
+                    <a href="javascript:void(0)" class="material-icons" onclick="Add()">add</a>
+                    <div id="addForm">
+                        <form class="clearfix" method="GET">
+                            <label class="sr-only" for="searchForm">Ajouter un livre:</label>
+                            <input type="text" name="add" id="add">
+                            <button type="submit" class="material-icons font-smoothing">done</button>
+                        </form>
+                    </div>
                 </div>
                 <div class="action-form">
-                    <a href="#" class="material-icons" onclick="">delete</a>
+                    <a href="javascript:void(0)" class="material-icons" onclick="Delete()">delete</a>
+                    <div id="deleteForm">
+                        <form class="clearfix" method="GET">
+                            <label class="sr-only" for="searchForm">Supprimer un livre:</label>
+                            <input type="text" name="delete" id="delete">
+                            <button type="submit" class="material-icons font-smoothing">done</button>
+                        </form>
+                    </div>
                 </div>
                 <div class="action-form">
-                    <a href="#" class="material-icons" onclick="">edit</a>
+                    <a href="javascript:void(0)" class="material-icons" onclick="Edit()">edit</a>
+                    <div id="editForm">
+                        <form class="clearfix" method="GET">
+                            <label class="sr-only" for="searchForm">Modifier un livre:</label>
+                            <input type="text" name="edit" id="edit">
+                            <button type="submit" class="material-icons font-smoothing">done</button>
+                        </form>
+                    </div>
                 </div>
             </div>
             <section class="row container-fluid livres">
                 {{#each book}}
-                    <div class="col-6 col-sm-3 col-lg-2 livre">
+                    <div class="col-6 col-sm-3 col-lg-2 col-xl-1 livre">
                         <div class="livre-info .font-smoothing">
                             <h4>{{title}}</h4>
                             <p>{{author}}</p>
-                            <button>En savoir plus</button>
+                            <a >plus</a>
                         </div>
                         <img src="{{url}}" class="img-fluid" alt="No Cover">
                     </div>
