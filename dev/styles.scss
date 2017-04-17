@@ -62,11 +62,17 @@ nav{
         background-color: $nav-bg-color;
         overflow: hidden;
         display: flex;
+        text-align: center;
+        flex-direction: row;
         justify-content: space-around;
         border-bottom: 1px solid #DFDFDF;
 
+        @media (max-width: 575px) {
+            flex-direction: column;
+        }
+
         a {
-            padding: 8px;
+            padding: 17px;
             text-decoration: none;
             font-size: 16px;
             color: $nav-color;
@@ -123,17 +129,17 @@ nav{
 
         .intro-text{
             h1{
+                font-size: 24px;
                 text-align: center;
                 color: white;
                 font-family: $quicksand;
-                margin: 10px;
             }
 
             p{
+                font-size: 16px;
                 font-family: $raleway;
                 text-align: justify;
                 color: white;
-                margin: 10px;
             }
         }
     }

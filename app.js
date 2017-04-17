@@ -9,6 +9,7 @@ var compression = require('compression');
 
 var index = require('./routes/index');
 var dashboard = require("./routes/dashboard");
+var livre = require("./routes/livre");
 
 var app = express();
 
@@ -22,16 +23,16 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'hbs');
 
 // uncomment after placing your favicon in /public
-app.use(favicon(path.join(__dirname, 'public', 'favicon.png')));
+app.use(favicon(path.join(__dirname, '/public', 'favicon.png')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(__dirname + '/public'));
-app.use('/bower_components',  express.static(__dirname + '/bower_components'));
 
 app.use('/', index);
-app.use('/dashboard', dashboard);
+app.use('/', dashboard);
+app.use('/', livre);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

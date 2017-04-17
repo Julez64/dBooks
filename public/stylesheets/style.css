@@ -43,11 +43,18 @@ nav .nav-links {
   background-color: #F2F2F2;
   overflow: hidden;
   display: flex;
+  text-align: center;
+  flex-direction: row;
   justify-content: space-around;
   border-bottom: 1px solid #DFDFDF;
 }
+@media (max-width: 575px) {
+  nav .nav-links {
+    flex-direction: column;
+  }
+}
 nav .nav-links a {
-  padding: 8px;
+  padding: 17px;
   text-decoration: none;
   font-size: 16px;
   color: #999999;
@@ -95,16 +102,16 @@ nav .nav-links a:hover {
   text-align: justify;
 }
 .page .intro .intro-text h1 {
+  font-size: 24px;
   text-align: center;
   color: white;
   font-family: "Quicksand", sans-serif;
-  margin: 10px;
 }
 .page .intro .intro-text p {
+  font-size: 16px;
   font-family: "Raleway", sans-serif;
   text-align: justify;
   color: white;
-  margin: 10px;
 }
 
 .container-dashboard .dash-container main {
