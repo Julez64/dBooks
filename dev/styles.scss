@@ -181,6 +181,18 @@ nav{
                     flex-direction: column;
                 }
 
+                a {
+                    padding: 8px 8px 8px 32px;
+                    text-decoration: none;
+                    font-size: 20px;
+                    color: $nav-color;
+                    transition: 0.3s;
+
+                    &:hover{
+                        color: $nav-color-hover;
+                    }
+                }
+
                 .action-form{
                     width: 100%;
 
@@ -213,18 +225,6 @@ nav{
                             padding: 5px;
                             float: left;
                         }
-                    }
-                }
-
-                a {
-                    padding: 8px 8px 8px 32px;
-                    text-decoration: none;
-                    font-size: 20px;
-                    color: $nav-color;
-                    transition: 0.3s;
-
-                    &:hover{
-                        color: $nav-color-hover;
                     }
                 }
             }
@@ -273,12 +273,12 @@ nav{
 
                 h4{
                     color: white;
-                    font-size: 20px;
+                    font-size: 22px;
                 }
 
                 p{
                     color: lightgrey;
-                    font-size: 14px;
+                    font-size: 18px;
                 }
 
                 a{
@@ -286,6 +286,7 @@ nav{
                     padding: 0 10px;
                     border-radius: 20px;
                     color: white;
+                    font-size: 14px;
                 }
             }
         }

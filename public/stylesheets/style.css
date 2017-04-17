@@ -141,6 +141,16 @@ nav .nav-links a:hover {
     flex-direction: column;
   }
 }
+.container-dashboard .dash-container main .dash-controls a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #999999;
+  transition: 0.3s;
+}
+.container-dashboard .dash-container main .dash-controls a:hover {
+  color: #666666;
+}
 .container-dashboard .dash-container main .dash-controls .action-form {
   width: 100%;
 }
@@ -170,16 +180,6 @@ nav .nav-links a:hover {
   border: none;
   padding: 5px;
   float: left;
-}
-.container-dashboard .dash-container main .dash-controls a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 20px;
-  color: #999999;
-  transition: 0.3s;
-}
-.container-dashboard .dash-container main .dash-controls a:hover {
-  color: #666666;
 }
 .container-dashboard .livres {
   padding-top: 20px;
@@ -219,17 +219,18 @@ nav .nav-links a:hover {
 }
 .container-dashboard .livre .livre-info:hover h4, .container-dashboard .livre .livre-info:visited h4 {
   color: white;
-  font-size: 20px;
+  font-size: 22px;
 }
 .container-dashboard .livre .livre-info:hover p, .container-dashboard .livre .livre-info:visited p {
   color: lightgrey;
-  font-size: 14px;
+  font-size: 18px;
 }
 .container-dashboard .livre .livre-info:hover a, .container-dashboard .livre .livre-info:visited a {
   background-color: #E7353D;
   padding: 0 10px;
   border-radius: 20px;
   color: white;
+  font-size: 14px;
 }
 
 .font-smoothing {
