@@ -1,0 +1,53 @@
+<nav>
+    <div class="nav-content">
+        <a href="" class="brand">
+            {{title}}
+        </a>
+        <a href="javascript:void(0)" onclick="menuToggle()">
+            <i class="material-icons">arrow_drop_down</i>
+        </a>
+    </div>
+    <div class="nav-links">
+        <a href="#">link</a>
+        <a href="#">link</a>
+        <a href="#">link</a>
+        <a href="#">link</a>
+        <a href="#">link</a>
+        <a href="#">Sign-in/Register</a>
+    </div>
+</nav>
+
+<div class="container-fluid container-dashboard">
+    <div class="row dash-container">
+        <main class="col-12 pt-5">
+            <div class="dash-text clearfix ">
+                <h1>Bibliothèque</h1>
+                <i class="material-icons" onclick="SidenavToggle()">menu</i>
+            </div>
+            <div id="dash-controls" class="dash-controls">
+                <div class="action-form">
+                    <a href="#" class="material-icons" onclick="">add</a>
+                </div>
+                <div class="action-form">
+                    <a href="#" class="material-icons" onclick="">delete</a>
+                </div>
+                <div class="action-form">
+                    <a href="#" class="material-icons" onclick="">edit</a>
+                </div>
+            </div>
+            <section class="row container-fluid text-center livres">
+                {{#each book}}
+                    <div class="col-6 col-sm-3 col-lg-2 livre">
+                        <a href="javascript:void(0)">
+                            <div class="livre-info .font-smoothing">
+                                <h4>{{title}}</h4>
+                                <p>{{author}}</p>
+                            </div>
+                            <img src="{{url}}" class="img-fluid" alt="No Cover">
+                        </a>
+                    </div>
+                {{/each}}
+            </section>
+        </main>
+    </div>
+</div>
