@@ -69,3 +69,7 @@ function Edit(){
         $("#editForm").slideUp(500);
     }
 }
+
+$('.livre-info').perfectScrollbar({
+    "supressScrollX": false
+});

@@ -216,16 +216,14 @@ nav .nav-links a:hover {
 }
 .container-dashboard .livre .livre-info {
   position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
   text-align: center;
-  flex-direction: column;
   color: transparent;
   height: 100%;
   width: 100%;
   border: 3px solid white;
-  padding: 10px;
+  padding: 20px;
+  text-overflow: ellipsis;
   overflow-y: auto;
 }
 .container-dashboard .livre .livre-info a {
@@ -240,7 +238,6 @@ nav .nav-links a:hover {
 .container-dashboard .livre .livre-info:hover h4, .container-dashboard .livre .livre-info:hover p, .container-dashboard .livre .livre-info:hover a, .container-dashboard .livre .livre-info:visited h4, .container-dashboard .livre .livre-info:visited p, .container-dashboard .livre .livre-info:visited a {
   font-family: "Raleway", sans-serif;
   word-wrap: break-word;
-  text-overflow: ellipsis;
 }
 .container-dashboard .livre .livre-info:hover h4, .container-dashboard .livre .livre-info:visited h4 {
   color: white;
