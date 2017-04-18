@@ -42,9 +42,9 @@ nav{
             font-family: $concert-one;
             color: $accent-color;
 
-            &:hover{
+            &:hover, &:visited{
                 text-decoration: none;
-                color: $accent-color-hover;
+                color: $accent-color;
                 cursor: pointer;
                 transition: 0.3s;
             }
@@ -268,14 +268,16 @@ nav{
 
         .livre-info{
             position: absolute;
-            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
+            flex-direction: column;
             color: transparent;
             height: 100%;
             width: 100%;
             border: 3px solid white;
-            padding: 20px;
-            text-overflow: ellipsis;
+            padding: 10px;
             overflow-y: auto;
 
             a{
@@ -286,7 +288,7 @@ nav{
             &:hover, &:visited{
                 background-color :rgba(0,0,0,0.7);
                 border: 3px solid white;
-                transition: 0.3s;
+                transition: 0.15s;
                 
                 h4, p, a{
                     font-family: $raleway;
@@ -305,7 +307,7 @@ nav{
 
                 a{
                     background-color: $accent-color;
-                    padding: 0 10px;
+                    padding: 0 5px;
                     border-radius: 20px;
                     color: white;
                     font-size: 16px;
@@ -314,15 +316,13 @@ nav{
                     &:hover{
                         background-color: $accent-color-hover;
                         cursor: pointer;
-                        transition: 0.3s;
+                        transition: 0.15s;
                     }
                 }
             }
         }
     }
 }
-
-
 
 .font-smoothing {
     -webkit-font-smoothing: antialiased;

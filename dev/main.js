@@ -71,5 +71,6 @@ function Edit(){
 }
 
 $('.livre-info').perfectScrollbar({
-    "supressScrollX": false
+    "supressScrollX": false,
+    "scrollYMarginOffse": "10"
 });
