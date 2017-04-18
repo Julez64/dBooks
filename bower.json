@@ -19,6 +19,7 @@
     "jquery": "^3.2.1",
     "bootstrap": "v4.0.0-alpha.6",
     "material-icons": "^0.1.0",
-    "perfect-scrollbar": "^0.6.16"
+    "perfect-scrollbar": "^0.6.16",
+    "emojione": "^2.2.7"
   }
 }

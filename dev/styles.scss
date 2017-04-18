@@ -11,6 +11,10 @@ $quicksand: 'Quicksand', sans-serif;
 $raleway:  'Raleway', sans-serif;
 $concert-one: "Concert One",sans-serif;
 
+span .fa .fa-heart{
+    color: #E7353D;
+}
+
 textarea, input, button { 
     outline: none;
 
@@ -322,6 +326,11 @@ nav{
             }
         }
     }
+}
+
+.footer{
+    padding: 20px;
+    display: block;
 }
 
 .font-smoothing {
