@@ -1,11 +1,11 @@
 {
   "name": "dbooks",
-  "description": "",
+  "description": "dPCA-1.0",
   "main": "app.js",
   "authors": [
     "JulienFerluc <ferluc.julien@carrefour.cegepvicto.ca>"
   ],
-  "license": "GPL-3.0",
+  "license": "",
   "homepage": "https://github.com/JulienFerluc/dBooks",
   "private": true,
   "ignore": [
@@ -18,7 +18,7 @@
   "dependencies": {
     "jquery": "^3.2.1",
     "bootstrap": "v4.0.0-alpha.6",
-    "font-awesome": "Font-Awesome#^4.7.0",
-    "material-icons": "^0.1.0"
+    "material-icons": "^0.1.0",
+    "perfect-scrollbar": "^0.6.16"
   }
 }

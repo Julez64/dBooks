@@ -4,6 +4,7 @@ $nav-color-hover: #666666;
 $nav-color: #999999;
 $nav-bg-color: #F2F2F2;
 $accent-color: #E7353D;
+$accent-color-hover: #B7151D;
 $transparent: rgba(0,0,0,0);
 $semi-transparent: rgba(128,128,128,0.5);
 $quicksand: 'Quicksand', sans-serif;
@@ -20,6 +21,8 @@ textarea, input, button {
 
 nav{
     .nav-content{
+        position: relative;
+        z-index: 10;
         background-color: $nav-bg-color;
         display: flex;
         height: 50px;
@@ -27,18 +30,23 @@ nav{
         flex-wrap: wrap;
         align-items: center;
 
-        border-bottom: 1px solid #DFDFDF;
+        -webkit-box-shadow: 0px -1px 3px 1px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow:    0px -1px 3px 1px rgba(0, 0, 0, 0.5);
+        box-shadow:         0px -1px 3px 1px rgba(0, 0, 0, 0.5);
 
         .brand{
-            padding-left: 10px;
-            font-size: 50px;
+            padding-left: 20px;
+            font-size: 40px;
+            height: 50px;
+            line-height: 50px;
             font-family: $concert-one;
             color: $accent-color;
 
             &:hover{
                 text-decoration: none;
-                color: $nav-color-hover;
+                color: $accent-color-hover;
                 cursor: pointer;
+                transition: 0.3s;
             }
         }
 
@@ -62,11 +70,14 @@ nav{
         background-color: $nav-bg-color;
         overflow: hidden;
         display: flex;
-        justify-content: space-around;
+        text-align: center;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 0 40px;
         border-bottom: 1px solid #DFDFDF;
-
+        
         a {
-            padding: 8px;
+            padding: 17px;
             text-decoration: none;
             font-size: 16px;
             color: $nav-color;
@@ -74,6 +85,15 @@ nav{
 
             &:hover{
                 color: $nav-color-hover;
+                transition: 0.3s;
+            }
+        }
+
+        @media (max-width: 575px) {
+            flex-direction: column;
+
+            a:not(:first-of-type){
+                border-top: 1px solid #DFDFDF;
             }
         }
     }
@@ -123,17 +143,17 @@ nav{
 
         .intro-text{
             h1{
+                font-size: 24px;
                 text-align: center;
                 color: white;
                 font-family: $quicksand;
-                margin: 10px;
             }
 
             p{
+                font-size: 16px;
                 font-family: $raleway;
                 text-align: justify;
                 color: white;
-                margin: 10px;
             }
         }
     }
@@ -144,7 +164,7 @@ nav{
     .dash-container{
 
         main{
-            padding-top: 10px;
+            padding-top: 20px;
 
             .dash-text{
                 border-bottom: 1px solid #EEEEEE;
@@ -164,12 +184,12 @@ nav{
                     &:hover{
                         color: $nav-color-hover;
                         cursor: pointer;
+                        transition: 0.3s;
                     }
                 }
             }
 
             .dash-controls {
-                //max-width: 1040px;
                 z-index: 1;
                 background-color: #EEEEEE;
                 overflow: hidden;
@@ -190,6 +210,7 @@ nav{
 
                     &:hover{
                         color: $nav-color-hover;
+                        transition: 0.3s;
                     }
                 }
 
@@ -213,6 +234,7 @@ nav{
                             &:hover{
                                 color: $nav-color-hover;
                                 cursor: pointer;
+                                transition: 0.3s;
                             }
                         }
 
@@ -246,15 +268,15 @@ nav{
 
         .livre-info{
             position: absolute;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            display: block;
             text-align: center;
-            flex-direction: column;
             color: transparent;
             height: 100%;
             width: 100%;
             border: 3px solid white;
+            padding: 20px;
+            text-overflow: ellipsis;
+            overflow-y: auto;
 
             a{
                 color: transparent;
@@ -264,11 +286,11 @@ nav{
             &:hover, &:visited{
                 background-color :rgba(0,0,0,0.7);
                 border: 3px solid white;
+                transition: 0.3s;
                 
                 h4, p, a{
                     font-family: $raleway;
                     word-wrap: break-word;
-                    text-overflow: ellipsis;
                 }
 
                 h4{
@@ -286,7 +308,14 @@ nav{
                     padding: 0 10px;
                     border-radius: 20px;
                     color: white;
-                    font-size: 14px;
+                    font-size: 16px;
+                    
+                    
+                    &:hover{
+                        background-color: $accent-color-hover;
+                        cursor: pointer;
+                        transition: 0.3s;
+                    }
                 }
             }
         }

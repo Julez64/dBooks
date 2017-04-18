@@ -62,27 +62,7 @@ function Edit() {
     }
 }
 
-/*function menuToggle(){
-    if(!menuToggeled){
-        menuToggeled = true;
-        $(".nav-links").css({"height":"50px"});
-    }
-
-    else{
-        menuToggeled = false;
-        $(".nav-links").css({"height":"0"});
-    }
-}
-
-function SidenavToggle(){
-    if(!sidenavToggle){
-        sidenavToggle = true;
-        $(".dash-controls").css({"height":"300px"});
-    }
-
-    else{
-        sidenavToggle = false;
-        $(".dash-controls").css({"height":"0"});
-    }
-}*/
+$('.livre-info').perfectScrollbar({
+    "supressScrollX": false
+});
 //# sourceMappingURL=main.js.map
