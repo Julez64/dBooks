@@ -1,42 +1,35 @@
 var express = require('express');
 var router = express.Router();
 var mysql = require('mysql');
-var isEmpty = require('lodash.isempty');
 
 /* GET home page. */
 router.get('/livre/:id', function(req, res, next) {
 
     var connection = mysql.createConnection({
-        host: "70.30.248.159",
+        host: "192.168.2.65",
         user: "readonly",
         password: "uQgbI7IKaP1gn91n",
         database: "dBooks"
     });
 
-    connection.connect((err) => {
-        if(err){
-            console.log(err);
-            
-            res.status(err.status || 500);
-            res.render('error', { message: err.message, error: err });
-        } else {
-            connection.query('SELECT * FROM `Livres` WHERE `ID` = ?', [req.params.id], (err, row, fields) => {
-                if(err) {
-                    console.log(err);
-                    
-                    res.status(err.status || 500);
-                    res.render('error', { message: err.message, error: err });
-                }
-                
-                res.render('livre', {
-                    title: "dBooks",
-                    row: row[0]
-                });
+    connection.connect(connection);
 
-                connection.end();
-                console.log("Connection Ended!");
-            });
+    connection.query('SELECT * FROM `Livres` WHERE `ID` = ?', [req.params.id], (err, result, fields) => {
+        if(err || !result){
+            res.header("404");
+            throw err;
+        } else {
+            console.log("Query Successful!" + result[0].TitreLivre);
         }
+
+        res.render('livre', {
+            title: "dBooks",
+            TitreLivre: result[0].TitreLivre,
+            Annee: result[0].AnneeParution
+        });
+
+        connection.end();
+        console.log("Connection Ended!");
     });
 });
 
