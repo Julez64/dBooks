@@ -38,16 +38,20 @@
                 </div>
             </div>
             <section class="row container-fluid livres">
-                {{#each book}}
-                    <div class="col-6 col-sm-3 col-lg-2 col-xl-1 livre">
-                        <div class="livre-info .font-smoothing">
-                            <h4>{{title}}</h4>
-                            <p>{{author}}</p>
-                            <a >plus</a>
+                {{#with livre as |livre|}}
+                    {{#each livre}}
+                        <div class="col-6 col-sm-3 col-lg-2 col-xl-1 livre">
+                            <div class="livre-info .font-smoothing">
+                                <h4>{{titre}}</h4>
+                                <p>{{auteur}}</p>
+                                <a >plus</a>
+                            </div>
+                            <img src="/images/{{id}}.jpg" class="img-fluid" alt="No Cover">
                         </div>
-                        <img src="{{url}}" class="img-fluid" alt="No Cover">
-                    </div>
-                {{/each}}
+                    {{/each}}
+                {{else}}
+                    <p>Votre bilbiothètque est vide.</p>
+                {{/with}}
             </section>
             
         </main>
